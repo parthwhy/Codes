@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+
+int main() {
+    
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, k;
+        cin >> n >>k;
+        vector<int> arr(n+1,0);
+        int z=0,a=0;
+        int freq=0,count=0;
+        
+        for(int i=0;i<n;i++){
+            int a;
+            cin>>a;
+            arr[a]=1;
+            if(a==k) freq++;
+            
+        }
+        for(int i=0;i<k;i++){
+            if(arr[i]==0){
+            count++;
+            }
+        }
+
+        cout<<max(freq,count)<<endl;    
+
+
+    }
+    return 0;
+}
+
